@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  --bg-primary: #080C0A;
+  --bg-secondary: #0E1512;
+  --surface-primary: #141E19;
+  --surface-hover: #1D2B24;
+  --border-primary: #24332A;
+  --border-light: #3B5244;
+  --text-primary: #FFFFFF;
+  --text-body: #F5F6F0;
+  --text-muted: #CBD5CE;
+  --text-dim: #8FA094;
+  --color-vegetation: #22C55E;
+  --color-vegetation-light: #4ADE80;
+  --color-water: #0EA5E9;
+  --color-water-light: #38BDF8;
+  --color-soil: #F59E0B;
+  --color-soil-light: #FBBF24;
+  --color-alert: #EF4444;
+  --color-alert-light: #F87171;
+  --color-highlight: #FDE047;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-body);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Screen reader skip link */
+.skip-to-content {
+  position: absolute;
+  top: -60px;
+  left: 16px;
+  background: var(--color-soil);
+  color: #080C0A;
+  padding: 10px 20px;
+  z-index: 9999;
+  font-weight: 700;
+  border-radius: 6px;
+  transition: top 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+}
+
+.skip-to-content:focus {
+  top: 16px;
+}
+
+/* Crisp high-contrast selection */
+::selection {
+  background-color: #22C55E;
+  color: #080C0A;
+}
+
+/* High-contrast scrollbars */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #080C0A;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #24332A;
+  border-radius: 6px;
+  border: 2px solid #080C0A;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4ADE80;
+}
+
+/* Accessible focus ring */
+:focus-visible {
+  outline: 2px solid #4ADE80;
+  outline-offset: 3px;
+}
+
+/* Container query responsive table wrapper */
+.table-wrapper {
+  overflow-x: auto;
+  max-width: 100%;
+  container-type: inline-size;
+}
+
+/* Refined data badges */
+.data-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(20, 30, 25, 0.75);
+  backdrop-filter: blur(8px);
+}
+
+.heading-serif {
+  font-family: 'Newsreader', Georgia, serif;
+}
+
+.font-mono-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Subtle glow effects */
+.glow-card {
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: radial-gradient(circle at top left, rgba(74, 222, 128, 0.05), transparent 70%), #141E19;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.7);
+}
+
+.glow-card:hover {
+  border-color: rgba(74, 222, 128, 0.35);
+  box-shadow: 0 15px 40px -10px rgba(0, 0, 0, 0.8), 0 0 25px rgba(74, 222, 128, 0.12);
+}
